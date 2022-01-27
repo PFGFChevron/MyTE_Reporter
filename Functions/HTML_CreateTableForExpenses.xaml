@@ -1,0 +1,378 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="HTML_CreateTableForExpenses" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ucat="clr-namespace:UiPath.Core.Activities.TextModifications;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="HTML" Type="InOutArgument(x:String)" />
+    <x:Property Name="SelectedFile" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:HTML_CreateTableForExpenses.SelectedFile>
+    <InArgument x:TypeArguments="x:String" />
+  </this:HTML_CreateTableForExpenses.SelectedFile>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1007,4340</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>HTML_CreateTableForExpenses_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="HTML_CreateTableForExpenses" sap:VirtualizedContainerService.HintSize="646,4275" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_ExpenseStatusReport" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_Duplicate" />
+      <Variable x:TypeArguments="scg:ICollection(x:String)" Default="[new List(Of String)]" Name="Columns_Collection" />
+      <Variable x:TypeArguments="x:Int32" Name="Index" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_EnterpriseID" />
+      <Variable x:TypeArguments="x:String" Name="EnterpriseID" />
+      <Variable x:TypeArguments="scg:ICollection(x:String)" Default="[new List(Of String)]" Name="Rows_Collection" />
+      <Variable x:TypeArguments="x:String" Name="temp" />
+      <Variable x:TypeArguments="x:Int32" Default="3" Name="ExcelRow" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_Filter" />
+      <Variable x:TypeArguments="s:DateTime" Name="ExpenseDate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[DT_ExpenseStatusReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="604,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A2:AF250" SheetName="Expense Status Report" WorkbookPath="[SelectedFile]" />
+    <Assign sap:VirtualizedContainerService.HintSize="604,64" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[HTML]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[HTML+
+"&lt;br&gt;&lt;br&gt;&lt;b&gt;EXPENSES/REIMBURSMENTS&lt;/b&gt;&lt;br&gt;&lt;br&gt;"+vbNewLine]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Sequence sap2010:Annotation.AnnotationText="Create Datatable for the list of Enterprise ID" DisplayName="Sequence 'DT_Enterprise ID'" sap:VirtualizedContainerService.HintSize="604,1801" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[DT_Duplicate]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable">[DT_ExpenseStatusReport]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,194" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[DT_ExpenseStatusReport.Columns]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+            </ActivityAction.Argument>
+            <AddToCollection x:TypeArguments="x:String" Collection="[Columns_Collection]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[item.ToString]" />
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,342" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Columns_Collection]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+            </ActivityAction.Argument>
+            <If Condition="[item = &quot;Employee Enterprise ID&quot;]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Else>
+                <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="[item]" DataTable="[DT_Duplicate]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+              </If.Else>
+            </If>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+      <ui:RemoveDuplicateRows DataTable="[DT_Duplicate]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[DT_EnterpriseID]" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[Index]" DataTable="[DT_EnterpriseID]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="562,142" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <AddToCollection x:TypeArguments="x:String" Collection="[Rows_Collection]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[CurrentRow(0).ToString]" />
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,718" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Rows_Collection]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="526,584" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="484,244" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[EnterpriseID]" SourceText="[item]">
+                <ui:ModifyText.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucat:TrimTextModification DisplayName="Trim text" sap:VirtualizedContainerService.HintSize="387,51" sap2010:WorkflowViewState.IdRef="TrimTextModification_1" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ModifyText.Body>
+              </ui:ModifyText>
+              <If Condition="[EnterpriseID = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <ui:RemoveDataRow Row="{x:Null}" DataTable="[DT_EnterpriseID]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="[Index]" />
+                </If.Then>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+    <Sequence DisplayName="Sequence 'Add Excel Row Column'" sap:VirtualizedContainerService.HintSize="604,591" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadRange AddHeaders="True" DataTable="[DT_ExpenseStatusReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="468,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A2:AF250" SheetName="Expense Status Report" WorkbookPath="[SelectedFile]" />
+      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="ExcelRow" DataTable="[DT_ExpenseStatusReport]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="468,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[Index]" DataTable="[DT_ExpenseStatusReport]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="468,310" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="ExcelRow" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="UpdateRowItem_2" Row="[DT_ExpenseStatusReport.Rows(Index)]" Value="[(ExcelRow+Index).ToString]" />
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+    </Sequence>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_EnterpriseID]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="604,1480" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row_EnterpriseID" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="557,1360" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="515,64" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[HTML]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String" xml:space="preserve">[HTML+
+"&lt;b&gt;"+Row_EnterpriseID(0).ToString+"&lt;/b&gt;&lt;br&gt;"+
+"&lt;table  style='border-collapse: collapse;'&gt;"+vbNewLine+
+"   &lt;tr&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Expense Date &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Expense Status &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Reimbursement &lt;br&gt; Amount &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Expense Type &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Charge Code &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"      &lt;th style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp Remarks &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"   &lt;/tr&gt;"+vbNewLine]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:FilterDataTable DataTable="[DT_ExpenseStatusReport]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="515,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_Filter]" SelectColumnsMode="Keep">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["Employee Enterprise ID"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">[Row_EnterpriseID(0).ToString]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["Expense Status"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">["Deleted"]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="8">
+                  <InArgument x:TypeArguments="x:String">["Employee Enterprise ID"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Expense Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Reimbursement Amount"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Expense Type"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Charge Code"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Expense Status"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["ExcelRow"]</InArgument>
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Filter]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="515,864" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="481,744" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="ExpenseDate_String" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="439,168" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[SelectedFile]">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <ui:ExcelReadCell Cell="[&quot;O&quot;+CurrentRow(6).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Expense Status Report">
+                            <ui:ExcelReadCell.Result>
+                              <OutArgument x:TypeArguments="s:DateTime">[ExpenseDate]</OutArgument>
+                            </ui:ExcelReadCell.Result>
+                          </ui:ExcelReadCell>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                    </ui:ExcelApplicationScope>
+                    <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="439,340" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[ExpenseDate_String]" SourceText="[ExpenseDate.ToString]">
+                      <ui:ModifyText.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" SearchText=" 00:00:00">
+                              <ucat:FindAndReplaceTextModification.ReplaceText>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ucat:FindAndReplaceTextModification.ReplaceText>
+                            </ucat:FindAndReplaceTextModification>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ModifyText.Body>
+                    </ui:ModifyText>
+                    <Assign sap:VirtualizedContainerService.HintSize="439,64" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[HTML]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[HTML+vbNewLine+
+"   &lt;tr&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp "+ExpenseDate_String+" &amp;nbsp&lt;/td&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp "+CurrentRow(5).ToString+" &amp;nbsp&lt;/td&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp "+CurrentRow(2).ToString+" &amp;nbsp&lt;/td&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp "+CurrentRow(3).ToString+" &amp;nbsp&lt;/td&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp "+CurrentRow(4).ToString+" &amp;nbsp&lt;/td&gt;"+vbNewLine+
+"      &lt;td style='border: 1px solid #000000;text-align: center;padding: 4px;'&gt;&amp;nbsp &amp;nbsp&lt;/th&gt;"+vbNewLine+
+"   &lt;/tr&gt;"+vbNewLine]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <Assign sap:VirtualizedContainerService.HintSize="515,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[HTML]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[HTML+"&lt;/table&gt;"+vbNewLine]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
